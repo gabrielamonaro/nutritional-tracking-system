@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/4.7.0/css/font-awesome.min.css">
+ <title>Diário alimentar</title>
+</head>
+<body class="w3-black">
+<a href="../home/index.html" class="w3-display-topleft ">
+ <i class="fa fa-arrow-circle-left w3-large w3-blue w3-button w3-
+xxlarge"></i>
+</a>
+<div class="w3-padding w3-content w3-text-grey w3-third w3-margin w3-displaymiddle">
+ <h1 class="w3-center w3-blue w3-round-large w3-
+margin">Diário alimentar</h1>
+
+</div>
+</body>
+</html>
