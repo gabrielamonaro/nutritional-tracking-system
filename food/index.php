@@ -68,6 +68,8 @@ border"><br>
  echo '<tr>';
  echo '<td><br>'.$linha['nome'].'</td>';
  echo '<td> <br>'.$linha['id'].'</td>';
+ echo '<td><a href="excluir.php?id='.$linha['id'].'">excluir</a></td>';
+ echo '<td><a href="editar.php?id='.$linha['id'].'">excluir</a></td>';
  echo '</tr>';
  }
  $conexao->close();
