@@ -1,19 +1,5 @@
-body {
-  background-color: #f4eee2;
-  font-family: "Roboto", sans-serif;
+.buttons-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.title {
-  color: #474740;
-  font-family: "Satisfy", cursive;
-}
-
-header {
-  img {
-    height: 30px;
-  }
+  width: 400px;
 }
