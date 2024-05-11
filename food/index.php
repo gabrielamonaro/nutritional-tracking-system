@@ -58,8 +58,8 @@
         echo '<tr class="table-row">';
         echo '<td class="table-column"><br>'.$linha['nome'].'</td>';
         //  echo '<td> <br>'.$linha['id'].'</td>';
-        echo '<td  class="action-table-column"><a href="excluir.php?id='.$linha['id'].'"><img  src="../assets/icons/edit-button.svg"/></a></td>';
-        echo '<td  class="action-table-column"><a href="editar.php?id='.$linha['id'].'"><img src="../assets/icons/delete-button.svg"/></a></td>';
+        echo '<td  class="action-table-column"><a href="edit/edicaoForm.php?id='.$linha['id'].'"><img  src="../assets/icons/edit-button.svg"/></a></td>';
+        echo '<td  class="action-table-column"><a href="deleteAction.php?id='.$linha['id'].'"><img src="../assets/icons/delete-button.svg"/></a></td>';
         echo '</tr>';
         }
         $conexao->close();
