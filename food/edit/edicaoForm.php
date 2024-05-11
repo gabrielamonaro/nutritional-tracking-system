@@ -19,43 +19,39 @@
       href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,501;1,501&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Satisfy&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../styles/global.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="../style.css" />
     <title>Nutritional Tracking System</title>
   </head>
   <body>
-    <header>
+  <header>
+      <div class="home-button">
+        <a href="../home/">
+
+          <img src="../../assets/icons/home.svg" class="home-icon"/>
+        </a>
+      </div>
       <div class="header-container">
-        <img class="logo" src="../assets/img/food-and-restaurant.png" />
+        <img class="logo" src="../../assets/img/food-and-restaurant.png" />
         <div class="container-title">
-          <h1 class="title">Nutritional Tracking System</h1>
+          <h1 class="title">Diário alimentar</h1>
         </div>
       </div>
     </header>
     <div class="buttons-container">
-      <a href="../food/index.php">
-        <button name="btnAdd" class="button">
-          <i class="w3-xxlarge fa fa-plus-square"></i> Alimentos cadastrados
-        </button>
-      </a>
 
-      <a href="../diary/index.php">
-        <button
-          name="btnAdd"
-          class="w3-button w3-blue w3-cell w3-roundlarge w3-right w3-margin-right"
-        >
-          <i class="w3-xxlarge fa fa-plus-square"></i> Diário Alimentar
-        </button>
-      </a>
+    <form action="cadastroAction.php" class="w3-container" method='post'>
 
-      <a href="../reports/index.php">
-        <button
-          name="btnAdd"
-          class="w3-button w3-blue w3-cell w3-roundlarge w3-right w3-margin-right"
-        >
-          <i class="w3-xxlarge fa fa-plus-square"></i> Relatório
-        </button>
-      </a>
+<label class="w3-text-blue" style="fontweight: bold;">Nome</label>
+<input name="txtNome" class="w3-input w3-light-grey w3-
+border"><br>
+
+<button name="btnAdd" class="">
+<i class="w3-xxlarge fa fa-plus-square"></i> Adicionar
+</button>
+</form>
+
+
     </div>
   </body>
 </html>

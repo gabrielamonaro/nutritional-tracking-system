@@ -24,10 +24,18 @@
     <title>Nutritional Tracking System</title>
   </head>
   <body>
-    <header>
-      <img src="../assets/img/food-and-restaurant.png" />
-      <div class="title">
-        <h1>Relatório</h1>
+  <header>
+      <div class="home-button">
+        <a href="../home/">
+
+          <img src="../assets/icons/home.svg" class="home-icon"/>
+        </a>
+      </div>
+      <div class="header-container">
+        <img class="logo" src="../assets/img/food-and-restaurant.png" />
+        <div class="container-title">
+          <h1 class="title">Relatórios</h1>
+        </div>
       </div>
     </header>
     <div class="buttons-container">

@@ -2,7 +2,7 @@ CREATE DATABASE NutriDB;
 
 USE NutriDB;
 
-CREATE TABLE IF Alimentos (
+CREATE TABLE Alimentos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     UNIQUE (nome)

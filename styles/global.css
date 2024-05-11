@@ -14,29 +14,32 @@ body {
   padding: 0;
 }
 
-.title {
+.container-title {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
-  h1 {
-    color: #474740;
-    font-family: "Satisfy", cursive;
-    font-size: 3em;
-    text-align: center;
-  }
+
 }
 
-header {
+.title {
+  color: #474740;
+  font-family: "Satisfy", cursive;
+  font-size: 3em;
+  text-align: center;
+}
+
+.header-container {
   max-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   margin-top: 40px;
-  img {
-    height: 3em;
-  }
+}
+
+.logo {
+  height: 40px;
 }
 
 button {
@@ -53,4 +56,28 @@ button {
 button:hover {
   cursor: pointer;
   background-color: #47474045;
+}
+
+.home-button{
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin:  16px;
+}
+
+.table-container {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-add-button{
+  width: 80%;
+}
+
+.action-button{
+  height: 2px;
+  width: 2px;
 }
