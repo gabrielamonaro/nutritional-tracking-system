@@ -18,11 +18,10 @@ try {
 
     $conecta->query($sql);
 
-
-
-    // echo '<p>'.$_GET['id'].'</p>';
     header("Location: ../index.php");
 } catch(PDOException $e) {
-    echo '<a href="index.php"><h1 class="w3-button w3-blue">ERRO: ' . $e->getMessage() . '</h1></a>';
+    // echo '<a href="index.php"><h1 class="w3-button w3-blue">ERRO: ' . $e->getMessage() . '</h1></a>';
+    header("Location: ../../error");
+
 }
 ?>

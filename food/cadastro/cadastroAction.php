@@ -22,8 +22,8 @@ try {
     $stmt->execute();
 
     header("Location: ../index.php");
-    // echo '<a href="index.php"><h1 class="w3-button w3-blue">Produto Salvo com sucesso!</h1></a>';
 } catch(PDOException $e) {
-    echo '<a href="index.php"><h1 class="w3-button w3-blue">ERRO: ' . $e->getMessage() . '</h1></a>';
+    // echo '<a href="index.php"><h1 class="w3-button w3-blue">ERRO: ' . $e->getMessage() . '</h1></a>';
+    header("Location: ../../error");
 }
 ?>

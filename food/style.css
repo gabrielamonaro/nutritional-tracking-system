@@ -20,7 +20,7 @@ table{
     max-height: 30px;
     padding-left: 8px;
     padding-bottom: 8px;
-    border: 1px solid #474740;
+    border: 1px solid #47474055;
     border-radius: 2px;
   }
 
@@ -40,6 +40,6 @@ body{
   font-size: 12px;
   width: 8%;
   text-align: center;
-  border: 1px solid #474740;
+  border: 1px solid #47474039;
   border-radius: 2px;
 }
