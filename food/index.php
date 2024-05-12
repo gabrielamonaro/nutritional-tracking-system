@@ -46,20 +46,32 @@
         $servername = "localhost";
         $username = "root";
         $password = "usbw";
-        $dbname = "nutridb";
+        $dbname = "nutricao";
         $conexao = new mysqli($servername, $username, $password, $dbname);
         if ($conexao->connect_error) {
         die("Connection failed: " . $conexao->connect_error);
         }
-        $sql = "SELECT * FROM alimentos" ;
+
+
+        $sql = "SELECT * FROM cadastro_alimento" ;
         $resultado = $conexao->query($sql);
         if($resultado != null)
+        // $qualidade_media = 0;
+        // $quantidade_itens = 0;
+
+        // foreach($resultado as $linha) {
+        //   $qualidade_media = $qualidade_media + $linha['qualidade'];
+        //   $quantidade_itens = $quantidade_itens + 1;
+        // }
+        // $qualidade_media = $qualidade_media/$quantidade_itens;
+        // echo ' <h2> qualidade media --> '.$qualidade_media.' </h2>';
+
+
         foreach($resultado as $linha) {
         echo '<tr class="table-row">';
         echo '<td class="table-column"><br>'.$linha['nome'].'</td>';
-        //  echo '<td> <br>'.$linha['id'].'</td>';
-        echo '<td  class="action-table-column"><a href="edit/edicaoForm.php?id='.$linha['id'].'"><img  src="../assets/icons/edit-button.svg"/></a></td>';
-        echo '<td  class="action-table-column"><a href="deleteAction.php?id='.$linha['id'].'"><img src="../assets/icons/delete-button.svg"/></a></td>';
+        echo '<td  class="action-table-column"><a href="edit/edicaoForm.php?id='.$linha['id_alimento'].'&qualidade='.$linha['qualidade'].'&nome='.$linha['nome'].'"><img  src="../assets/icons/edit-button.svg"/></a></td>';
+        echo '<td  class="action-table-column"><a href="deleteAction.php?id='.$linha['id_alimento'].'"><img src="../assets/icons/delete-button.svg"/></a></td>';
         echo '</tr>';
         }
         $conexao->close();

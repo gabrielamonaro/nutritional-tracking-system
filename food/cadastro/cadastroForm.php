@@ -34,7 +34,7 @@
       <div class="header-container">
         <img class="logo" src="../../assets/img/food-and-restaurant.png" />
         <div class="container-title">
-          <h1 class="title">Diário alimentar</h1>
+          <h1 class="title">Alimentos</h1>
         </div>
       </div>
     </header>
@@ -43,11 +43,12 @@
     <form action="cadastroAction.php" class="w3-container" method='post'>
 
 <label class="w3-text-blue" style="fontweight: bold;">Nome</label>
-<input name="txtNome" class="w3-input w3-light-grey w3-
-border"><br>
+<input name="txtNome"><br>
+<label class="w3-text-blue" style="fontweight: bold;">Qualidade</label>
+<input name="qualidade" type="number"><br>
 
 <button name="btnAdd" class="">
-<i class="w3-xxlarge fa fa-plus-square"></i> Adicionar
+ Adicionar
 </button>
 </form>
 

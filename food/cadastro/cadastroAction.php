@@ -2,7 +2,7 @@
 $host = "localhost";
 $usuario = "root";
 $senha = "usbw";
-$bd = "nutridb";
+$bd = "nutricao";
 
 try {
     $conecta = new PDO("mysql:host=$host;dbname=$bd;charset=utf8", $usuario, $senha);
@@ -11,12 +11,13 @@ try {
     echo "falha ao conectar: " . $e->getMessage();
 }
 
-$sql = "INSERT INTO alimentos (nome) VALUES (:nome)";
+$sql = "INSERT INTO cadastro_alimento (nome, qualidade) VALUES (:nome, :qualidade)";
 
 try {
     $stmt = $conecta->prepare($sql);
 
     $stmt->bindParam(':nome', $_POST['txtNome']);
+    $stmt->bindParam(':qualidade', $_POST['qualidade']);
 
     $stmt->execute();
 
