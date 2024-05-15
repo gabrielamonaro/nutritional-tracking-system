@@ -4,3 +4,42 @@
   width: 30%;
   margin-bottom: 10%;
 }
+
+table{
+  border-collapse: separate;
+  width: 100%;
+  
+
+}
+
+  .table-row{
+    margin-bottom: 2px;
+  }
+  
+  .table-column{
+    max-height: 30px;
+    padding-left: 8px;
+    padding-bottom: 8px;
+    border: 1px solid #47474055;
+    border-radius: 2px;
+  }
+
+
+
+body{
+  justify-content: flex-start;
+}
+
+.header-container {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.action-table-column{
+  max-height: 30px;
+  font-size: 12px;
+  width: 8%;
+  text-align: center;
+  border: 1px solid #47474039;
+  border-radius: 2px;
+}

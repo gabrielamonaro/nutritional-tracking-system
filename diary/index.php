@@ -24,7 +24,7 @@
     <title>Nutritional Tracking System</title>
   </head>
   <body>
-    <header>
+  <header>
       <div class="home-button">
         <a href="../home/">
 
@@ -38,47 +38,51 @@
         </div>
       </div>
     </header>
-    <div class="buttons-container">
 
-    <form action="cadastroAction.php" class="w3-container" method='post'>
+    <main class="table-container">
 
-<label class="w3-text-blue" style="fontweight: bold;">Nome</label>
-<input name="txtNome" class="w3-input w3-light-grey w3-
-border"><br>
+    <table cellspacing="4">
+            <?php
+        $servername = "localhost";
+        $username = "root";
+        $password = "usbw";
+        $dbname = "nutricao";
+        $conexao = new mysqli($servername, $username, $password, $dbname);
+        if ($conexao->connect_error) {
+        die("Connection failed: " . $conexao->connect_error);
+        }
 
-<button name="btnAdd" class="w3-button w3-blue w3-cell w3-roundlarge w3-right w3-margin-right">
-<i class="w3-xxlarge fa fa-plus-square"></i> Adicionar
-</button>
-</form>
+
+        $sql = "SELECT * FROM cadastro_diario" ;
+        $resultado = $conexao->query($sql);
+        if($resultado != null)
 
 
-      <a href="../food/cadastro.php">
-        <button name="btnAdd" class="button">
-          <i class="w3-xxlarge fa fa-plus-square"></i> Alimentos cadastrados
-        </button>
-      </a>
 
-    </div>
+        foreach($resultado as $linha) {
+        echo '<tr class="table-row">';
+        echo '<td class="table-column"><br>'.$linha['id'].'</td>';
+        echo '<td class="table-column"><br>'.$linha['horario'].'</td>';
+        echo '<td class="table-column"><br>'.$linha['dia'].'</td>';
+        echo '<td class="table-column"><br>'.$linha['tp_refeicao'].'</td>';
+        echo '<td class="table-column"><br>'.$linha['quantidade'].$linha['unidade_medida'].'</td>';
+        echo '<td class="table-column"><br>'.$linha['lugar'].'</td>';
+        echo '<td class="table-column"><br>'.$linha['nivel_fome'].'</td>';
+        echo '<td  class="action-table-column"><a href="edit/edicaoForm.php?id='.$linha['id'].'&horario='.$linha['horario'].'&dia='.$linha['dia'].'&tp_refeicao='.$linha['tp_refeicao'].'&quantidade='.$linha['quantidade'].'&unidade_medida='.$linha['unidade_medida'].'&lugar='.$linha['lugar'].'&nivel_fome='.$linha['nivel_fome'].'"><img  src="../assets/icons/edit-button.svg"/></a></td>';
+        echo '<td  class="action-table-column"><a href="deleteAction.php?id='.$linha['id'].'"><img src="../assets/icons/delete-button.svg"/></a></td>';
+        echo '</tr>';
+        }
+        $conexao->close();
+        ?>
+    </table>
 
-    <?php
- $servername = "localhost";
- $username = "root";
- $password = "usbw";
- $dbname = "nutridb";
- $conexao = new mysqli($servername, $username, $password, $dbname);
- if ($conexao->connect_error) {
- die("Connection failed: " . $conexao->connect_error);
- }
- $sql = "SELECT * FROM alimentos" ;
- $resultado = $conexao->query($sql);
- if($resultado != null)
- foreach($resultado as $linha) {
- echo '<tr>';
- echo '<td><br>'.$linha['nome'].'</td>';
- echo '<td> <br>'.$linha['id'].'</td>';
- echo '</tr>';
- }
- $conexao->close();
- ?>
+  <a href="cadastro/cadastroForm.php" class="table-add-button">
+    <button name="btnAdd"   >
+    Adicionar
+   </button>
+  </a>
+    </main>
+
+
   </body>
 </html>

@@ -7,6 +7,7 @@ use nutricao;
 CREATE TABLE cadastro_diario (
     id INT NOT NULL AUTO_INCREMENT,
     horario TIME,
+    dia DATE,
     tp_refeicao ENUM('cafe da manha', 'almoco', 'cafe da tarde', 'jantar') NOT NULL,
     unidade_medida ENUM('grama', 'mililitro') NOT NULL,
     quantidade DECIMAL(10,2) NOT NULL,
