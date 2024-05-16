@@ -11,7 +11,7 @@ try {
     echo "falha ao conectar: " . $e->getMessage();
 }
 
-$sql = "INSERT INTO cadastro_diario (id_alimento, dia, horario, tp_refeicao, unidade_medida, quantidade, lugar, nivel_fome) VALUES (:id_alimento, :dia, :horario, :tp_refeicao, :unidade_medida, :quantidade, :lugar, :nivel_fome)";
+$sql = "INSERT INTO cadastro_diario (id_alimento, dia, horario, tp_refeicao, unidade_medida, quantidade, lugar, nivel_fome, registro) VALUES (:id_alimento, :dia, :horario, :tp_refeicao, :unidade_medida, :quantidade, :lugar, :nivel_fome, :registro)";
 
 try {
     $stmt = $conecta->prepare($sql);
@@ -26,6 +26,7 @@ try {
     $stmt->bindParam(':quantidade', $_POST['quantidade']);
     $stmt->bindParam(':lugar', $_POST['lugar']);
     $stmt->bindParam(':nivel_fome', $_POST['nivel_fome']);
+    $stmt->bindParam(':registro', $_POST['registro']);
 
 
     $stmt->execute();

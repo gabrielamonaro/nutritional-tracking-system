@@ -12,7 +12,7 @@ try {
 }
 
 
-$sql = "UPDATE cadastro_alimento SET nome = '".$_POST['txtNome']."', qualidade = '".$_POST['qualidade']."' WHERE id_alimento = ".$_GET['id'];
+$sql = "UPDATE cadastro_diario SET registro = '".$_POST['registro']."', lugar = '".$_POST['lugar']."', quantidade = '".$_POST['quantidade']."', unidade_medida = '".$_POST['unidade_medida']."', tp_refeicao = '".$_POST['tp_refeicao']."', dia = '".$_POST['dia']."', horario = '".$_POST['horario']."', nivel_fome = '".$_POST['nivel_fome']."' WHERE id = ".$_GET['id'];
 
 try {
 
@@ -20,8 +20,8 @@ try {
 
     header("Location: ../index.php");
 } catch(PDOException $e) {
-    // echo '<a href="index.php"><h1 class="w3-button w3-blue">ERRO: ' . $e->getMessage() . '</h1></a>';
-    header("Location: ../../error");
+    echo '<a href="index.php"><h1 class="w3-button w3-blue">ERRO: ' . $e->getMessage() . '</h1></a>';
+    // header("Location: ../../error");
 
 }
 ?>

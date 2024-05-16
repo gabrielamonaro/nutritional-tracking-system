@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+?:<!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
@@ -26,7 +26,7 @@
   <body>
   <header>
       <div class="home-button">
-        <a href="../home/">
+        <a href="../../home/">
 
           <img src="../../assets/icons/home.svg" class="home-icon"/>
         </a>
@@ -42,17 +42,129 @@
 
     <form action="edicaoAction.php?<?php echo "id='".$_GET['id']?>'" class="w3-container" method='post'>
 
-    
-   
-<label class="w3-text-blue" style="fontweight: bold;" >Nome</label>
-<input name="txtNome" value="<?php echo $_GET['nome']?>"><br>
-<label class="w3-text-blue" style="fontweight: bold;" >Qualidade</label>
-<input name="qualidade" type="number" value="<?php echo $_GET['qualidade']?>"><br>
+<label class="w3-text-blue" style="fontweight: bold;">Nome</label>
+<input disabled name="id_alimento" value="<?php echo $_GET['id_alimento']?>"><br>
+
+
+<label class="w3-text-blue" style="fontweight: bold;">Data</label>
+<input name="dia" type="date" value="<?php echo $_GET['dia']?>"><br>
+
+<label class="w3-text-blue" style="fontweight: bold;">Horário</label>
+<input name="horario" type="time" value="<?php echo $_GET['horario']?>"><br>
+
+<label class="w3-text-blue" style="fontweight: bold;">Refeição</label>
+
+<?php
+  if( $_GET['tp_refeicao'] === 'almoco') {
+    echo '<select name="tp_refeicao">
+    <option value="cafe da manha"> Café da manhã </option>
+    <option value="almoco" selected> Almoço </option>
+    <option value="cafe da tarde"> Café da tarde </option>
+    <option value="jantar"> Jantar </option>
+  </select>';
+  } else if ( $_GET['tp_refeicao'] === 'cafe da tarde'){
+    echo '<select name="tp_refeicao">
+    <option value="cafe da manha"> Café da manhã </option>
+    <option value="almoco"> Almoço </option>
+    <option value="cafe da tarde" selected> Café da tarde </option>
+    <option value="jantar"> Jantar </option>
+  </select>';
+} else if ($_GET['tp_refeicao'] === 'jantar') {
+  echo '<select name="tp_refeicao">
+  <option value="cafe da manha"> Café da manhã </option>
+  <option value="almoco"> Almoço </option>
+  <option value="cafe da tarde" > Café da tarde </option>
+  <option value="jantar" selected> Jantar </option>
+</select>';
+} else {
+  echo '<select name="tp_refeicao">
+  <option value="cafe da manha" selected> Café da manhã </option>
+  <option value="almoco"> Almoço </option>
+  <option value="cafe da tarde" > Café da tarde </option>
+  <option value="jantar"> Jantar </option>
+</select>';
+}
+?>
+
+
+<br>
+
+<label class="w3-text-blue" style="fontweight: bold;">Unidade de medida</label>
+
+<?php
+  if( $_GET['unidade_medida'] === 'mililitro') {
+    echo '<select name="unidade_medida">
+    <option> grama </option>
+    <option selected> mililitro </option>
+  </select>';
+  } else {
+    echo '<select name="unidade_medida">
+    <option selected> grama </option>
+    <option > mililitro </option>
+  </select>';
+} 
+?>
+
+<br>
+
+<label class="w3-text-blue" style="fontweight: bold;">Quantidade</label>
+<input name="quantidade" type="number" value="<?php echo $_GET['quantidade']?>">
+<br>
+
+<label class="w3-text-blue" style="fontweight: bold;">Lugar</label>
+<?php
+  if( $_GET['lugar'] === 'fora') {
+    echo '<select name="lugar">
+    <option value="casa"> Casa </option>
+    <option value="fora" selected> Fora </option>
+  </select> ';
+  } else {
+    echo '<select name="lugar">
+    <option value="casa" selected> Casa </option>
+    <option value="fora"> Fora </option>
+  </select> ';
+} 
+?>
+ 
+<br>
+
+<label class="w3-text-blue" style="fontweight: bold;">Nível da fome</label>
+<?php
+  if(  $_GET['nivel_fome'] === '2') {
+    echo '<select name="nivel_fome">
+    <option value="1"> 1 </option>
+    <option value="2" selected> 2 </option>
+    <option value="3"> 3 </option>
+  </select>  ';
+  }  else if(  $_GET['nivel_fome'] === '3') {
+    echo '<select name="nivel_fome">
+    <option value="1"> 1 </option>
+    <option value="2" > 2 </option>
+    <option value="3" selected> 3 </option>
+  </select>  ';
+} else {
+  echo '<select name="nivel_fome">
+  <option value="1" selected> 1 </option>
+  <option value="2" > 2 </option>
+  <option value="3" > 3 </option>
+</select>  ';
+}
+?>
+
+<br>
+
+<label class="w3-text-blue" style="fontweight: bold;">Observações</label>
+<textarea name="registro"> <?php echo $_GET['registro']?></textarea>
+<br>
 
 <button name="btnAdd" class="">
  Atualizar
 </button>
 </form>
+
+
+    
+
 
 
     </div>

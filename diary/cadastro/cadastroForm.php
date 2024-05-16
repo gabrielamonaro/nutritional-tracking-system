@@ -26,7 +26,7 @@
   <body>
   <header>
       <div class="home-button">
-        <a href="../home/">
+        <a href="../../home/">
 
           <img src="../../assets/icons/home.svg" class="home-icon"/>
         </a>
@@ -54,10 +54,10 @@
 
 <label class="w3-text-blue" style="fontweight: bold;">Refeição</label>
 <select name="tp_refeicao">
-  <option> Café da manhã </option>
-  <option> Almoço </option>
-  <option> Café da tarde </option>
-  <option> Jantar </option>
+  <option value="cafe da manha"> Café da manhã </option>
+  <option value="almoco"> Almoço </option>
+  <option value="cafe da tarde"> Café da tarde </option>
+  <option value="jantar"> Jantar </option>
 </select>  
 <br>
 
@@ -88,7 +88,7 @@
 <br>
 
 <label class="w3-text-blue" style="fontweight: bold;">Observações</label>
-<textarea name="obs"> </textarea>
+<textarea name="registro"> </textarea>
 <br>
 
 <button name="btnAdd" class="">
