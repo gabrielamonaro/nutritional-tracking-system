@@ -11,13 +11,13 @@ try {
     echo "falha ao conectar: " . $e->getMessage();
 }
 
-$sql = "DELETE FROM cadastro_alimento WHERE id_alimento = '".$_GET['id'] ."';";
+$sql = "DELETE FROM cadastro_diario WHERE id = '".$_GET['id'] ."';";
 
 
 try {
     $conecta->query($sql);
 
-    header("Location: ../index.php");
+    header("Location: index.php");
 } catch(PDOException $e) {
     echo '<a href="index.php"><h1 class="w3-button w3-blue">ERRO: ' . $e->getMessage() . '</h1></a>';
 }

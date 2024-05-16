@@ -68,7 +68,7 @@
         echo '<td class="table-column"><br>'.$linha['quantidade'].$linha['unidade_medida'].'</td>';
         echo '<td class="table-column"><br>'.$linha['lugar'].'</td>';
         echo '<td class="table-column"><br>'.$linha['nivel_fome'].'</td>';
-        echo '<td  class="action-table-column"><a href="edit/edicaoForm.php?id='.$linha['id'].'&horario='.$linha['horario'].'&dia='.$linha['dia'].'&tp_refeicao='.$linha['tp_refeicao'].'&quantidade='.$linha['quantidade'].'&unidade_medida='.$linha['unidade_medida'].'&lugar='.$linha['lugar'].'&nivel_fome='.$linha['nivel_fome'].'"><img  src="../assets/icons/edit-button.svg"/></a></td>';
+        echo '<td  class="action-table-column"><a href="edit/edicaoForm.php?id='.$linha['id'].'&horario='.$linha['horario'].'&id_alimento='.$linha['id_alimento'].'&dia='.$linha['dia'].'&tp_refeicao='.$linha['tp_refeicao'].'&quantidade='.$linha['quantidade'].'&unidade_medida='.$linha['unidade_medida'].'&lugar='.$linha['lugar'].'&nivel_fome='.$linha['nivel_fome'].'&registro='.$linha['registro'].'"><img  src="../assets/icons/edit-button.svg"/></a></td>';
         echo '<td  class="action-table-column"><a href="deleteAction.php?id='.$linha['id'].'"><img src="../assets/icons/delete-button.svg"/></a></td>';
         echo '</tr>';
         }
