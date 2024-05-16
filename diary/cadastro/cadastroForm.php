@@ -63,8 +63,8 @@
 
 <label class="w3-text-blue" style="fontweight: bold;">Unidade de medida</label>
 <select name="unidade_medida" type="number">
-  <option> grama </option>
-  <option> mililitro </option>
+  <option value="grama"> grama </option>
+  <option value="mililitro"> mililitro </option>
 </select>  
 <br>
 
@@ -74,16 +74,16 @@
 
 <label class="w3-text-blue" style="fontweight: bold;">Lugar</label>
 <select name="lugar">
-  <option> Casa </option>
-  <option> Fora </option>
+  <option value="casa"> Casa </option>
+  <option value="fora"> Fora </option>
 </select>  
 <br>
 
 <label class="w3-text-blue" style="fontweight: bold;">Nível da fome</label>
 <select name="nivel_fome">
-  <option> 1 </option>
-  <option> 2 </option>
-  <option> 3 </option>
+  <option value="1"> 1 </option>
+  <option value="2"> 2 </option>
+  <option value="3"> 3 </option>
 </select>  
 <br>
 
