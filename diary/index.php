@@ -53,7 +53,9 @@
         }
 
 
-        $sql = "SELECT * FROM cadastro_diario" ;
+        $sql = "SELECT * 
+        FROM cadastro_diario cd
+        LEFT JOIN cadastro_alimento ca ON cd.id_alimento = ca.id_alimento;" ;
         $resultado = $conexao->query($sql);
         if($resultado != null)
 
@@ -61,7 +63,7 @@
 
         foreach($resultado as $linha) {
         echo '<tr class="table-row">';
-        echo '<td class="table-column"><br>'.$linha['id'].'</td>';
+        echo '<td class="table-column"><br>'.$linha['nome'].'</td>';
         echo '<td class="table-column"><br>'.$linha['horario'].'</td>';
         echo '<td class="table-column"><br>'.$linha['dia'].'</td>';
         echo '<td class="table-column"><br>'.$linha['tp_refeicao'].'</td>';

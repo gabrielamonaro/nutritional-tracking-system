@@ -42,9 +42,33 @@
 
     <form action="cadastroAction.php" class="w3-container" method='post'>
 
-<label class="w3-text-blue" style="fontweight: bold;">Nome</label>
-<input name="id_alimento"><br>
+<label class="w3-text-blue" style="fontweight: bold;">Alimento</label>
 
+
+<?php
+        $servername = "localhost";
+        $username = "root";
+        $password = "usbw";
+        $dbname = "nutricao";
+        $conexao = new mysqli($servername, $username, $password, $dbname);
+        if ($conexao->connect_error) {
+        die("Connection failed: " . $conexao->connect_error);
+        }
+
+        echo '<select name="id_alimento">';
+
+        $sql = "SELECT * FROM cadastro_alimento" ;
+        $resultado = $conexao->query($sql);
+        if($resultado != null)
+        foreach($resultado as $linha) {
+        echo ' <option value="'.$linha['id_alimento'].'">' .$linha['nome']. '</option>';
+
+        }
+
+      echo "</select>";   
+
+        $conexao->close();
+        ?>
 
 <label class="w3-text-blue" style="fontweight: bold;">Data</label>
 <input name="dia" type="date"><br>

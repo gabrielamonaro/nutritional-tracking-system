@@ -34,6 +34,7 @@ try {
 
     header("Location: ../index.php");
 } catch(PDOException $e) {
-    header("Location: ../../error");
+    echo '<a href="index.php"><h1 class="w3-button w3-blue">ERRO1: ' . $e->getMessage() . '</h1></a>';
+    // header("Location: ../../error");
 }
 ?>
