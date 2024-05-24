@@ -26,7 +26,6 @@
     <header>
       <div class="home-button">
         <a href="../home/">
-
           <img src="../assets/icons/home.svg" class="home-icon"/>
         </a>
       </div>
@@ -37,7 +36,13 @@
       </div>
     </header>
     <main class="container-error" style="height: 30%;">
-      <p class="w3-xxlarge fa fa-plus-square"></p> Ocorreu um erro ao processar sua solicitação. Tente novamente.
+      <?php
+        if(isset($_GET['value'])){
+          echo "<p>".$_GET['value']."</p>";
+        } else {
+          echo "<p>Ocorreu um erro ao processar sua solicitação. Tente novamente.</p>";
+        }
+      ?>
     </main>
   </body>
 </html>

@@ -4,3 +4,12 @@
   width: 30%;
   margin-bottom: 10%;
 }
+
+
+table{
+  border: 1px solid red;
+}
+
+body{
+  border: 3px solid red;
+}

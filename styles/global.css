@@ -30,7 +30,7 @@ body {
 }
 
 .header-container {
-  max-width: 400px;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,3 +81,22 @@ button:hover {
   height: 2px;
   width: 2px;
 }
+
+table{
+  border-collapse: separate;
+  width: 100%;
+  
+
+}
+
+  .table-row{
+    margin-bottom: 2px;
+  }
+  
+  .table-column{
+    max-height: 30px;
+    padding-left: 8px;
+    padding-bottom: 8px;
+    border: 1px solid #47474055;
+    border-radius: 2px;
+  }

@@ -11,6 +11,7 @@ try {
     echo "falha ao conectar: " . $e->getMessage();
 }
 
+
 $sql = "INSERT INTO cadastro_diario (id_alimento, dia, horario, tp_refeicao, unidade_medida, quantidade, lugar, nivel_fome, registro) VALUES (:id_alimento, :dia, :horario, :tp_refeicao, :unidade_medida, :quantidade, :lugar, :nivel_fome, :registro)";
 
 try {
@@ -33,7 +34,6 @@ try {
 
     header("Location: ../index.php");
 } catch(PDOException $e) {
-    // echo '<a href="index.php"><h1 class="w3-button w3-blue">ERRO: ' . $e->getMessage() . '</h1></a>';
     header("Location: ../../error");
 }
 ?>

@@ -38,47 +38,22 @@
         </div>
       </div>
     </header>
+
     <div class="buttons-container">
-
-    <form action="cadastroAction.php" class="w3-container" method='post'>
-
-<label class="w3-text-blue" style="fontweight: bold;">Nome</label>
-<input name="txtNome" class="w3-input w3-light-grey w3-
-border"><br>
-
-<button name="btnAdd" class="w3-button w3-blue w3-cell w3-roundlarge w3-right w3-margin-right">
-<i class="w3-xxlarge fa fa-plus-square"></i> Adicionar
-</button>
-</form>
-
-
-      <a href="../food/cadastro.php">
-        <button name="btnAdd" class="button">
-          <i class="w3-xxlarge fa fa-plus-square"></i> Alimentos cadastrados
+      <a href="mensal.php">
+        <button name="mensal" class="button">
+       Relatório mensal
         </button>
       </a>
 
+      <a href="quinzenal.php">
+        <button
+          name="quinzenal"
+        >
+         Relatório quinzenal
+        </button>
+      </a>
     </div>
 
-    <?php
- $servername = "localhost";
- $username = "root";
- $password = "usbw";
- $dbname = "nutridb";
- $conexao = new mysqli($servername, $username, $password, $dbname);
- if ($conexao->connect_error) {
- die("Connection failed: " . $conexao->connect_error);
- }
- $sql = "SELECT * FROM alimentos" ;
- $resultado = $conexao->query($sql);
- if($resultado != null)
- foreach($resultado as $linha) {
- echo '<tr>';
- echo '<td><br>'.$linha['nome'].'</td>';
- echo '<td> <br>'.$linha['id'].'</td>';
- echo '</tr>';
- }
- $conexao->close();
- ?>
   </body>
 </html>
