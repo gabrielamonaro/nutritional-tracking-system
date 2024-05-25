@@ -26,7 +26,7 @@
   <body>
   <header>
       <div class="home-button">
-        <a href="../home/">
+        <a href="../../home/">
 
           <img src="../../assets/icons/home.svg" class="home-icon"/>
         </a>
@@ -41,11 +41,18 @@
     <div class="buttons-container">
 
     <form action="cadastroAction.php" class="w3-container" method='post'>
+    <div class="field-container">
 
-<label class="w3-text-blue" style="fontweight: bold;">Nome</label>
-<input name="txtNome"><br>
-<label class="w3-text-blue" style="fontweight: bold;">Qualidade</label>
-<input name="qualidade" type="number"><br>
+<label style="fontweight: bold;">Nome</label>
+<input name="txtNome"><br> </div>
+
+<label  style="fontweight: bold;">Qualidade</label>
+<div class="field-container">
+  <select name="qualidade">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+  </select>
 
 <button name="btnAdd" class="">
  Adicionar

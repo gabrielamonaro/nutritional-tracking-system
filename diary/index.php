@@ -39,9 +39,9 @@
       </div>
     </header>
 
-    <main class="table-container">
+    <main class="table-container" style="width: 60%">
 
-    <table cellspacing="4">
+    <table cellspacing="4" style="width: 100%">
             <?php
         $servername = "localhost";
         $username = "root";

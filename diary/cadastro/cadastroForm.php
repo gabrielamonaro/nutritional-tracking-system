@@ -55,7 +55,7 @@
         die("Connection failed: " . $conexao->connect_error);
         }
 
-        echo '<select name="id_alimento">';
+        echo '<div class="field-container"><select name="id_alimento">';
 
         $sql = "SELECT * FROM cadastro_alimento" ;
         $resultado = $conexao->query($sql);
@@ -65,17 +65,20 @@
 
         }
 
-      echo "</select>";   
+      echo "</select><br> <div/>";   
 
         $conexao->close();
         ?>
 
+<div class="field-container">
 <label class="w3-text-blue" style="fontweight: bold;">Data</label>
-<input name="dia" type="date"><br>
+<input name="dia" type="date"><br>      </div>
 
+<div class="field-container">
 <label class="w3-text-blue" style="fontweight: bold;">Horário</label>
-<input name="horario" type="time"><br>
+<input name="horario" type="time"><br>      </div>
 
+<div class="field-container">
 <label class="w3-text-blue" style="fontweight: bold;">Refeição</label>
 <select name="tp_refeicao">
   <option value="cafe da manha"> Café da manhã </option>
@@ -83,37 +86,43 @@
   <option value="cafe da tarde"> Café da tarde </option>
   <option value="jantar"> Jantar </option>
 </select>  
-<br>
+<br>      </div>
 
+<div class="field-container">
 <label class="w3-text-blue" style="fontweight: bold;">Unidade de medida</label>
 <select name="unidade_medida" type="number">
   <option value="grama"> grama </option>
   <option value="mililitro"> mililitro </option>
 </select>  
-<br>
+<br>      </div>
 
+<div class="field-container">
 <label class="w3-text-blue" style="fontweight: bold;">Quantidade</label>
 <input name="quantidade" type="number">
-<br>
+<br>      </div>
 
+<div class="field-container">
 <label class="w3-text-blue" style="fontweight: bold;">Lugar</label>
 <select name="lugar">
   <option value="casa"> Casa </option>
   <option value="fora"> Fora </option>
 </select>  
-<br>
+<br>      </div>
 
+<div class="field-container">
 <label class="w3-text-blue" style="fontweight: bold;">Nível da fome</label>
 <select name="nivel_fome">
   <option value="1"> 1 </option>
   <option value="2"> 2 </option>
   <option value="3"> 3 </option>
 </select>  
-<br>
+<br>      </div>
 
+<div class="field-container">
 <label class="w3-text-blue" style="fontweight: bold;">Observações</label>
 <textarea name="registro"> </textarea>
 <br>
+      </div>
 
 <button name="btnAdd" class="">
  Adicionar
