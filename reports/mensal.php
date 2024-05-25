@@ -60,7 +60,7 @@ echo '<h1 class="title">Relatório Mensal - '.$nomeMesAtual . '</h1>'
       </div>
     </header>
 
-<table class="reports-table">
+<table class="reports-table" style="width: 70%">
 
 <?php
  $servername = "localhost";

@@ -7,7 +7,7 @@
 
 table{
   border-collapse: separate;
-  width: 100%;
+  width: 70%;
 }
 
   .table-row{
@@ -44,5 +44,4 @@ body{
 
 .table-container{
   width: 70%;
-  border: 1px solid red;
 }

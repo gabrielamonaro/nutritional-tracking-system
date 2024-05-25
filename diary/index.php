@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" >
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -42,6 +42,13 @@
     <main class="table-container" style="width: 60%">
 
     <table cellspacing="4" style="width: 100%">
+     <td class="table-column"><br>Alimento</td>
+         <td class="table-column"><br>Horário</td>
+         <td class="table-column"><br>Dia</td>
+         <td class="table-column"><br>Refeição</td>
+         <td class="table-column"><br>Quantidade</td>
+         <td class="table-column"><br>Lugar</td>
+         <td class="table-column"><br>Nível da fome</td>
             <?php
         $servername = "localhost";
         $username = "root";
